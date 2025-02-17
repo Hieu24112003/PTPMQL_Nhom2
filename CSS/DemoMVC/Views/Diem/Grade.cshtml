@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Tính Điểm Môn Học";
+}
+
+<h2>Tính Điểm Môn Học</h2>
+
+<form method="post">
+    <label for="A">Điểm A:</label>
+    <input type="text" name="A" min="0" max="10" required /><br />
+
+    <label for="B">Điểm B:</label>
+    <input type="text" name="B" min="0" max="10" required /><br />
+
+    <label for="C">Điểm C:</label>
+    <input type="text" name="C" min="0" max="10" required /><br />
+
+    <button type="submit">Tính Điểm</button>
+</form>
+
+@if (ViewBag.FinalScore != null)
+{
+    <h3>Điểm Tổng Kết: @ViewBag.FinalScore</h3>
+    <p>Xếp Loại: @ViewBag.Grade</p>
+}
